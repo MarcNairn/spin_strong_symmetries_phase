@@ -1,9 +1,0 @@
-name: Nonreciprocal Dimer Initialization
-description: Initialization file for the nonreciprocal atoms project using Julia.
-dependencies:
-  - QuantumCumulants
-  - ModelingToolkit
-  - OrdinaryDiffEq
-  - Plots
-  - LaTeXStrings
-  - PGFPlotsX
