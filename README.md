@@ -34,6 +34,7 @@ We also need to consider the choice of initial mean field variables for both spi
 $$
 \frac{|\uparrow\downarrow\rangle + |\downarrow\uparrow\rangle}{\sqrt{2}}
 $$
+
 and an empty cavity, $\langle a^\dagger a\rangle = 0$. The real valued mean field variable vector takes the form:
 
 $$
