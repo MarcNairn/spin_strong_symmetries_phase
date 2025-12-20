@@ -29,7 +29,12 @@ $$
 
 which, in practice, determines the position of the frequency peak in the normalized Fourier spectrum after the DC component is removed. This is the object we study to discriminate between stationary states and those with persistent oscillations into their steady state (nonstationary states).
 
-We also need to consider the choice of initial mean field variables for both spin species and the cavity field. For this, we consider the $x$-polarized initial state for both spins, corresponding to the fully symmetric superposition $$\left(|\uparrow\downarrow\rangle + |\downarrow\uparrow\rangle\right)/\sqrt{2}$$ and an empty cavity, $\langle a^\dagger a\rangle = 0$. The real valued mean field variable vector takes the form:
+We also need to consider the choice of initial mean field variables for both spin species and the cavity field. For this, we consider the $x$-polarized initial state for both spins, corresponding to the fully symmetric superposition
+
+$$
+\frac{|\uparrow\downarrow\rangle + |\downarrow\uparrow\rangle\right}{\sqrt{2}}
+$$ 
+and an empty cavity, $\langle a^\dagger a\rangle = 0$. The real valued mean field variable vector takes the form:
 
 $$
 u_0 = (a_x, a_p, m_x^A, m_y^A, m_z^A, m_x^B, m_y^B, m_z^B)
