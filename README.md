@@ -32,7 +32,7 @@ which, in practice, determines the position of the frequency peak in the normali
 We also need to consider the choice of initial mean field variables for both spin species and the cavity field. For this, we consider the $x$-polarized initial state for both spins, corresponding to the fully symmetric superposition
 
 $$
-\frac{\left|\uparrow\downarrow\right\rangle + \left|\downarrow\uparrow\right\rangle}{\sqrt{2}}
+\frac{|\uparrow\downarrow\rangle + |\downarrow\uparrow\rangle}{\sqrt{2}}
 $$
 and an empty cavity, $\langle a^\dagger a\rangle = 0$. The real valued mean field variable vector takes the form:
 
