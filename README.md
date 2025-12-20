@@ -2,7 +2,6 @@
 
 This repository contains scripts to generate the data and figures used in the paper *(arXiv:??/??2025)*. The code implements the mean-field equations of motion and finite-size exact-diagonalization numerics for permutation-symmetric spin systems. A short utility script is included to automatically identify strong symmetries in collective two- and three-level systems.
 
-
 ---
 
 ## Quick Summary of Main Results
@@ -17,21 +16,24 @@ This repository contains scripts to generate the data and figures used in the pa
 The workflow of the program is as follows.
 
 We first consider solving the steady-state dynamics of the mean-field equations of motion. From this, we extract the long-time window observables $O(t)$ and their Fourier transform
+
 $$
-\mathcal{F}_O(\omega) = \int_{-\infty}^\infty dt\, e^{i\omega t}O(t).
+\mathcal{F}_O(\omega) = \int_{-\infty}^\infty dt\; e^{i\omega t} O(t).
 $$
 
 For our interests, we choose to define the **order parameter**
+
 $$
 \tilde{\omega}_O = \arg\max_\omega\left[\mathcal{F}_O(\omega)\right] \in [0,1],
 $$
+
 which, in practice, determines the position of the frequency peak in the normalized Fourier spectrum after the DC component is removed. This is the object we study to discriminate between stationary states and those with persistent oscillations into their steady state (nonstationary states).
 
-We also need to consider the choice of initial mean field variables for both spin species and the cavity field. For this, we consider the $x$-polarized initial state for both spins, corresponding to the fully symmetric superposition$ \left(\ket{\uparrow\downarrow} + \ket{\downarrow\uparrow}\right)/\sqrt{2}$ and an empty cavity, $\langle a^\dagger a\rangle =0$. The real valued mean field variable vector takes the form: 
+We also need to consider the choice of initial mean field variables for both spin species and the cavity field. For this, we consider the $x$-polarized initial state for both spins, corresponding to the fully symmetric superposition \(\left(\left|\uparrow\downarrow\right\rangle + \left|\downarrow\uparrow\right\rangle\right)/\sqrt{2}\) and an empty cavity, $\langle a^\dagger a\rangle = 0$. The real valued mean field variable vector takes the form:
+
 $$
-u_0 = (a_x,a_p, m_x^A, m_y^A,m_z^A,m_x^B,m_y^B,m_z^B) 
-$$$$
-=(0,0,1,0,0,1,0,0).
+u_0 = (a_x, a_p, m_x^A, m_y^A, m_z^A, m_x^B, m_y^B, m_z^B)
+= (0, 0, 1, 0, 0, 1, 0, 0).
 $$
 
 The scripts to implement the mean field analysis are stored in the `simul` folder, and contain a leading "`MF`" in their filename. 
@@ -40,7 +42,6 @@ The scripts to implement the mean field analysis are stored in the `simul` folde
 ## Dimensionality Reduction via Permutation Invariance
 
 At the same time, we also consider performing finite-size dynamics. The key to simulating large system sizes (up to $N = 100$ spins) lies in exploiting the full permutation symmetry of the Hamiltonian and jump operators. For a system of $N$ identical two-level systems (spin-$1/2$ particles), the Hilbert space dimension naively scales as $2^N$. However, under global permutation symmetry, the state is completely characterized by its total angular momentum $j$ and the projection $m_j$, along with the multiplicity (Dicke manifold).
-
 
 For permutation-invariant states, the relevant subspace is the **Dicke manifold** (or symmetric subspace), where all spins are indistinguishable. The dimension of this symmetric subspace is only $N + 1$, growing linearly with $N$ instead of exponentially.
 
@@ -57,12 +58,12 @@ The `PermutationalInvariant` quantum solver (`PIQS`) in QuTiP automatically rest
 
 This reduction allows the simulation of system sizes that are otherwise computationally intractable for exact density-matrix evolution, enabling the study of collective phenomena in large spin ensembles.
 
-The implementation can be found within the `simul`folder, under `finite_size_spins.ipynb`.
+The implementation can be found within the `simul` folder, under `finite_size_spins.ipynb`.
 
 
 ## Strong symmetries and where to find them
 
-In the context of open quantum systems described by a Lindblad master equation, a **strong symmetry** is defined as an operator $X$ that simultaneously commutes with both the Hamiltonian $H$ and *every* jump operator $L_k$: $[X, H] = 0$ and $[X, L_k] = 0$ for all $k$. This stringent condition ensures that the corresponding observable is conserved under the full dynamics,both coherent and dissipative, leading to a block-diagonal structure of the Liouvillian superoperator in the eigenbasis of $X$. Each block corresponds to a distinct symmetry sector, and coherences between these sectors are perfectly protected from decoherence.
+In the context of open quantum systems described by a Lindblad master equation, a **strong symmetry** is defined as an operator $X$ that simultaneously commutes with both the Hamiltonian $H$ and *every* jump operator $L_k$: $[X, H] = 0$ and $[X, L_k] = 0$ for all $k$. This stringent condition ensures that the corresponding observable is conserved under the full dynamics, both coherent and dissipative, leading to a block-diagonal structure of the Liouvillian superoperator in the eigenbasis of $X$. Each block corresponds to a distinct symmetry sector, and coherences between these sectors are perfectly protected from decoherence.
 
 Since this is a key feature of our work, it is also important to be able to find such a $X$. For this, we implement a symbolic algorithm in Python that solves for operators $X$. The script can be found in the `simul/strongsym` folder and works as follows:
 
@@ -94,7 +95,7 @@ For ease of navigation, this repository is organized as follows:
 
 - **`old_unused/`**: auxiliary files (not essential).
 
-- **`finsize_data/`**: Stores data used for figures generated from the `simul`scripts
+- **`finsize_data/`**: Stores data used for figures generated from the `simul` scripts
 
 - **`figs_for_paper/`**: Contains plots and plot scripts for the figures used in the manuscript.
 
