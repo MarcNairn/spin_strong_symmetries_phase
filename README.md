@@ -29,7 +29,7 @@ $$
 
 which, in practice, determines the position of the frequency peak in the normalized Fourier spectrum after the DC component is removed. This is the object we study to discriminate between stationary states and those with persistent oscillations into their steady state (nonstationary states).
 
-We also need to consider the choice of initial mean field variables for both spin species and the cavity field. For this, we consider the $x$-polarized initial state for both spins, corresponding to the fully symmetric superposition \(\left(\left|\uparrow\downarrow\right\rangle + \left|\downarrow\uparrow\right\rangle\right)/\sqrt{2}\) and an empty cavity, $\langle a^\dagger a\rangle = 0$. The real valued mean field variable vector takes the form:
+We also need to consider the choice of initial mean field variables for both spin species and the cavity field. For this, we consider the $x$-polarized initial state for both spins, corresponding to the fully symmetric superposition $$\left(|\uparrow\downarrow\rangle + |\downarrow\uparrow\rangle\right)/\sqrt{2}\$$and an empty cavity, $\langle a^\dagger a\rangle = 0$. The real valued mean field variable vector takes the form:
 
 $$
 u_0 = (a_x, a_p, m_x^A, m_y^A, m_z^A, m_x^B, m_y^B, m_z^B)
@@ -41,7 +41,7 @@ The scripts to implement the mean field analysis are stored in the `simul` folde
 
 ## Dimensionality Reduction via Permutation Invariance
 
-At the same time, we also consider performing finite-size dynamics. The key to simulating large system sizes (up to $N = 100$ spins) lies in exploiting the full permutation symmetry of the Hamiltonian and jump operators. For a system of $N$ identical two-level systems (spin-$1/2$ particles), the Hilbert space dimension naively scales as $2^N$. However, under global permutation symmetry, the state is completely characterized by its total angular momentum $j$ and the projection $m_j$, along with the multiplicity (Dicke manifold).
+At the same time, we also consider performing finite-size dynamics. The key to simulating large system sizes (up to $N = 100$ spins) lies in exploiting the full permutation symmetry of the Hamiltonian and jump operators. For a system of $N$ identical two-level systems (spin-1/2 particles), the Hilbert space dimension naively scales as $2^N$. However, under global permutation symmetry, the state is completely characterized by its total angular momentum $j$ and the projection $m_j$, along with the multiplicity (Dicke manifold).
 
 For permutation-invariant states, the relevant subspace is the **Dicke manifold** (or symmetric subspace), where all spins are indistinguishable. The dimension of this symmetric subspace is only $N + 1$, growing linearly with $N$ instead of exponentially.
 
