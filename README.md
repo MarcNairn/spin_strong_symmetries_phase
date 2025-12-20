@@ -12,7 +12,7 @@ This repository contains scripts to generate the data and figures used in the pa
 - By *continuously tuning* $\varphi$, the *critical driving strength* $\eta_c$ to trigger the dissipative phase transition and produce **nonstationary states** can be **arbitrarily lowered**. 
 - The results are general and apply to any class of spin systems (here we study 2 and 3 level systems) that admit a collective representation, so long as the initial state does not live in a trivial/uncorrelated eigenstate.
 
-### Mean field analysis
+## Mean field analysis
 
 The workflow of the program is as follows.
 
@@ -37,7 +37,7 @@ $$
 The scripts to implement the mean field analysis are stored in the `simul` folder, and contain a leading "`MF`" in their filename. 
 
 
-### Dimensionality Reduction via Permutation Invariance
+## Dimensionality Reduction via Permutation Invariance
 
 At the same time, we also consider performing finite-size dynamics. The key to simulating large system sizes (up to $N = 100$ spins) lies in exploiting the full permutation symmetry of the Hamiltonian and jump operators. For a system of $N$ identical two-level systems (spin-$1/2$ particles), the Hilbert space dimension naively scales as $2^N$. However, under global permutation symmetry, the state is completely characterized by its total angular momentum $j$ and the projection $m_j$, along with the multiplicity (Dicke manifold).
 
@@ -48,7 +48,7 @@ For example:
 - $N$ qubits: The symmetric subspace dimension is $N + 1$.
 - $N$ qutrits (three-level systems): The symmetric subspace dimension is $\frac{(N+1)(N+2)}{2}$, growing quadratically instead of as $3^N$.
 
-#### Qutip Implementation
+### Qutip Implementation
 
 The `PermutationalInvariant` quantum solver (`PIQS`) in QuTiP automatically restricts the dynamics to this symmetric subspace by:
 1.  Constructing the Liouvillian directly in the basis of permutation-invariant states.
@@ -60,7 +60,7 @@ This reduction allows the simulation of system sizes that are otherwise computat
 The implementation can be found within the `simul`folder, under `finite_size_spins.ipynb`.
 
 
-### Strong symmetries and where to find them
+## Strong symmetries and where to find them
 
 In the context of open quantum systems described by a Lindblad master equation, a **strong symmetry** is defined as an operator $X$ that simultaneously commutes with both the Hamiltonian $H$ and *every* jump operator $L_k$: $[X, H] = 0$ and $[X, L_k] = 0$ for all $k$. This stringent condition ensures that the corresponding observable is conserved under the full dynamics,both coherent and dissipative, leading to a block-diagonal structure of the Liouvillian superoperator in the eigenbasis of $X$. Each block corresponds to a distinct symmetry sector, and coherences between these sectors are perfectly protected from decoherence.
 
@@ -76,7 +76,7 @@ Since this is a key feature of our work, it is also important to be able to find
 
 The resulting operator's eigenstates reveal the invariant subspaces of the dynamics. By examining these eigenstates, we can construct the appropriate initial conditions that will remain within a single symmetry sector, enabling the stabilization of nonstationary phases at low driving strengths.
 
-### Decoherence-free subspaces
+## Decoherence-free subspaces
 
 A decoherence-free subspace (DFS) is a subspace of the total Hilbert space that is completely immune to environmental decoherence, where quantum states evolve unitarily despite the system being open. In our model, when both spin species have equal and nonzero detuning, a DFS emerges naturally. 
 
@@ -84,7 +84,7 @@ The presence of a DFS can be directly identified in the Liouvillian eigenvalue s
 
 To spot such features we devise a small script to diagonalize the full Liouvillian spectrum for a set of system sizes, for both the two level and three level systems. These are stored in `simul/alt_finite_size_spins.ipynb` and `simul/liouv_spec_spin1.ipynb`, respectively.
 
-### Repo structure
+## Repo structure
 
 For ease of navigation, this repository is organized as follows:
 
