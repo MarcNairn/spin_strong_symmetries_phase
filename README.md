@@ -18,7 +18,7 @@ The workflow of the program is as follows.
 We first consider solving the steady-state dynamics of the mean-field equations of motion. From this, we extract the long-time window observables $O(t)$ and their Fourier transform
 
 $$
-\mathcal{F}_O(\omega) = \int_{-\infty}^\infty dt\; e^{i\omega t} O(t).
+\mathcal{F}_O(\omega) = \int_{-\infty}^\infty dt e^{i\omega t} O(t).
 $$
 
 For our interests, we choose to define the **order parameter**
