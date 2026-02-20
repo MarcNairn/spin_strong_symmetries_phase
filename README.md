@@ -1,6 +1,6 @@
 # Phase-engineered Strong Symmetries
 
-This repository contains scripts to generate the data and figures used in the paper *(arXiv:??/??2025)*. The code implements the mean-field equations of motion and finite-size exact-diagonalization numerics for permutation-symmetric spin systems. A short utility script is included to automatically identify strong symmetries in collective two- and three-level systems.
+This repository contains scripts to generate the data and figures used in the paper *(arXiv:??/??2026)*. The code implements the mean-field equations of motion and finite-size exact-diagonalization numerics for permutation-symmetric spin systems. A short utility script is included to automatically identify strong symmetries in collective two- and three-level systems.
 
 
 ---
