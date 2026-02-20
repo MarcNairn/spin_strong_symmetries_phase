@@ -17,22 +17,15 @@ This repository contains scripts to generate the data and figures used in the pa
 The workflow of the program is as follows.
 
 We first consider solving the steady-state dynamics of the mean-field equations of motion. From this, we extract the long-time window observables $O(t)$ and their Fourier transform
-$$
+$
 \mathcal{F}_O(\omega) = \int_{-\infty}^\infty dt\, e^{i\omega t}O(t).
-$$
+$x
 
 For our interests, we choose to define the **order parameter**
-$$
+$
 \tilde{\omega}_O = \arg\max_\omega\left[\mathcal{F}_O(\omega)\right] \in [0,1],
-$$
+$
 which, in practice, determines the position of the frequency peak in the normalized Fourier spectrum after the DC component is removed. This is the object we study to discriminate between stationary states and those with persistent oscillations into their steady state (nonstationary states).
-
-We also need to consider the choice of initial mean field variables for both spin species and the cavity field. For this, we consider the $x$-polarized initial state for both spins, corresponding to the fully symmetric superposition$ \left(\ket{\uparrow\downarrow} + \ket{\downarrow\uparrow}\right)/\sqrt{2}$ and an empty cavity, $\langle a^\dagger a\rangle =0$. The real valued mean field variable vector takes the form: 
-$$
-u_0 = (a_x,a_p, m_x^A, m_y^A,m_z^A,m_x^B,m_y^B,m_z^B) 
-$$$$
-=(0,0,1,0,0,1,0,0).
-$$
 
 The scripts to implement the mean field analysis are stored in the `simul` folder, and contain a leading "`MF`" in their filename. 
 
