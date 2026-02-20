@@ -17,14 +17,10 @@ This repository contains scripts to generate the data and figures used in the pa
 The workflow of the program is as follows.
 
 We first consider solving the steady-state dynamics of the mean-field equations of motion. From this, we extract the long-time window observables $O(t)$ and their Fourier transform
-$
-\mathcal{F}_O(\omega) = \int_{-\infty}^\infty dt\, e^{i\omega t}O(t).
-$x
+$\mathcal{F}_O(\omega) = \int_{-\infty}^\infty dt\, e^{i\omega t}O(t).$
 
 For our interests, we choose to define the **order parameter**
-$
-\tilde{\omega}_O = \arg\max_\omega\left[\mathcal{F}_O(\omega)\right] \in [0,1],
-$
+$\tilde{\omega}_O = \arg\max_\omega\left[\mathcal{F}_O(\omega)\right] \in [0,1],$
 which, in practice, determines the position of the frequency peak in the normalized Fourier spectrum after the DC component is removed. This is the object we study to discriminate between stationary states and those with persistent oscillations into their steady state (nonstationary states).
 
 The scripts to implement the mean field analysis are stored in the `simul` folder, and contain a leading "`MF`" in their filename. 
