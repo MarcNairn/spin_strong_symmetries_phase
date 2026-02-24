@@ -68,7 +68,7 @@ A decoherence-free subspace (DFS) is a subspace of the total Hilbert space that 
 
 The presence of a DFS can be directly identified in the Liouvillian eigenvalue spectrum. The DFS can be immediately identified by a set of purely imaginary eigenvalues $\lambda_{\mathcal{L}} = \pm i \Delta$, corresponding to undamped oscillatory modes. These are traditionally independent of system size as they arise due to the symmetry of the system. 
 
-To spot such features we devise a small script to diagonalize the full Liouvillian spectrum for a set of system sizes, for both the two level and three level systems. These are stored in `simul/alt_finite_size_spins.ipynb` and `simul/liouv_spec_spin1.ipynb`, respectively.
+To spot such features we devise a small script to diagonalize the full Liouvillian spectrum for a set of system sizes, for both the two level and three level systems. These are stored in `simul/alt_finite_size_spins.ipynb` and `simul/liouv_spec_spin1.ipynb`, for the two level and three level systems respectively.
 
 ## Repo structure
 
