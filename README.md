@@ -18,7 +18,7 @@ The workflow of the program is as follows.
 
 We first consider solving the steady-state dynamics of the mean-field equations of motion. From this, we extract the long-time window observables and their Fourier transform.
 
-For our interests, we choose to define the **order parameter**, $\tilde{\omega}$ as the dominant (normalized) frequency in the Fourier spectrum. This is the object we study to discriminate between stationary states and those with persistent oscillations into their steady state (nonstationary states).
+For our interests, we choose to define the **order parameter**, $\tilde{\omega}_m$ as the dominant (normalized) frequency in the Fourier spectrum of species $m$. This is the object we study to discriminate between stationary states and those with persistent oscillations into their steady state (nonstationary states).
 
 The scripts to implement the mean field analysis are stored in the `simul` folder, and contain a leading "`MF`" in their filename. 
 
