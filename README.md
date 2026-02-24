@@ -38,7 +38,7 @@ For example:
 
 The `PermutationalInvariant` quantum solver (`PIQS`) in QuTiP automatically restricts the dynamics to this symmetric subspace by:
 1.  Constructing the Liouvillian directly in the basis of permutation-invariant states.
-2.  Using the angular momentum algebra to represent collective spin operators ($J_x, J_y, J_z, J_\pm$) that act on the Dicke states $|j, m_j\rangle$.
+2.  Using the angular momentum algebra to represent collective spin operators ($S_x, S_y, S_z, S_\pm$) that act on the Dicke states $|S^2, m_z\rangle$.
 3.  Handling the non-collective dissipative terms (if present) by properly symmetrizing them.
 
 This reduction allows the simulation of system sizes that are otherwise computationally intractable for exact density-matrix evolution, enabling the study of collective phenomena in large spin ensembles.
@@ -52,7 +52,7 @@ In the context of open quantum systems described by a Lindblad master equation, 
 
 Since this is a key feature of our work, it is also important to be able to find such a $X$. For this, we implement a symbolic algorithm in Python that solves for operators $X$. The script can be found in the `simul/strongsym` folder and works as follows:
 
-1. We define the Hamiltonian $H$ and jump operator $L$ for either a two-level (spin-1/2) or three-level system, keeping the relative phase $\varphi$ as a symbolic parameter.
+1. We define the Hamiltonian $H$ and jump operator $L$ for either a two-level (spin- $\tfrac{1}{2}$) or three-level system, keeping the relative phase $\varphi$ as a symbolic parameter.
 
 2. We impose $[X,H] = 0$ and $[X,L] = 0$, where $X$ is an unknown operator represented by a matrix with symbolic entries.
 
