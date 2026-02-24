@@ -25,7 +25,7 @@ The scripts to implement the mean field analysis are stored in the `simul` folde
 
 ## Dimensionality Reduction via Permutation Invariance
 
-At the same time, we also consider performing finite-size dynamics. The key to simulating large system sizes (up to $N = 100$ spins) lies in exploiting the full permutation symmetry of the Hamiltonian and jump operators. For a system of $N$ identical two-level systems (spin-$\frac{1}{2}$ particles), the Hilbert space dimension naively scales as $2^N$. However, under global permutation symmetry, the state is completely characterized by its total angular momentum $j$ and the projection $m_j$, along with the multiplicity (Dicke manifold).
+At the same time, we also consider performing finite-size dynamics. The key to simulating large system sizes (up to $N = 100$ spins) lies in exploiting the full permutation symmetry of the Hamiltonian and jump operators. For a system of $N$ identical two-level systems (spin- $\tfrac{1}{2}$ particles), the Hilbert space dimension naively scales as $2^N$. However, under global permutation symmetry, the state is completely characterized by its total angular momentum $j$ and the projection $m_j$, along with the multiplicity (Dicke manifold).
 
 
 For permutation-invariant states, the relevant subspace is the **Dicke manifold** (or symmetric subspace), where all spins are indistinguishable. The dimension of this symmetric subspace is only $N + 1$, growing linearly with $N$ instead of exponentially.
