@@ -64,7 +64,7 @@ The resulting operator's eigenstates reveal the invariant subspaces of the dynam
 
 ## Decoherence-free subspaces
 
-A decoherence-free subspace (DFS) is a subspace of the total Hilbert space that is completely immune to environmental decoherence, where quantum states evolve unitarily despite the system being open. In our model, when both spin species have equal and nonzero detuning, a DFS emerges naturally. 
+A decoherence-free subspace (DFS) is a subspace of the total Hilbert space that is completely immune to environmental decoherence, where quantum states evolve unitarily despite the system being open. In our model, when both spin species have equal and nonzero detuning $\Delta$, a DFS emerges naturally. Similarly, in the three level system, we encounter similar features both for equal ($\Delta$) and equal and opposite ($\Delta,-\Delta$) detunings between sublevels.ö
 
 The presence of a DFS can be directly identified in the Liouvillian eigenvalue spectrum. The DFS can be immediately identified by a set of purely imaginary eigenvalues $\lambda_{\mathcal{L}} = \pm i \Delta$, corresponding to undamped oscillatory modes. These are traditionally independent of system size as they arise due to the symmetry of the system. 
 
